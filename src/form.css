@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@300&family=Spline+Sans+Mono:wght@300&display=swap');
+
 .fmain {
     display: flex;
     flex-direction: column;
@@ -12,8 +14,8 @@
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     font-size: 1.1rem;
-    background-color: black;
-    font-family:'Courier New', Courier, monospace;
+    background-color: rgb(32, 32, 32);
+    font-family: 'Spline Sans Mono', monospace;
     border : 2px solid rgb(49, 49, 137);
     border-top-left-radius: 5px;
     border-top-right-radius: 5px ;
@@ -22,6 +24,7 @@
 .fmain textarea:focus{
     outline-color: rgb(55, 55, 201);
     outline-width: 8px;
+    background-color: rgb(50, 49, 49);
     
 
 }
@@ -30,8 +33,9 @@
     margin-top: .10rem;
     color: whitesmoke;
     background-color: black;
-    padding: .5rem;
+    padding: .8rem;
     font-size: .8rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .Info-1{
@@ -61,13 +65,76 @@
     font-size: 1rem;
     padding-left: 2px;
     
+    
 }
 
 .btn-spl{
     padding: 5px 10px;
     font-family:Arial, Helvetica, sans-serif;
     letter-spacing: 1px;
+    
 }
+
+/*-------------popUp Design------------------------*/
+
+
+.model-container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    padding-top: 5rem;
+    font-family: 'Open Sans', sans-serif;
+    
+    
+}
+
+
+.model{
+
+    width: 60%;
+    max-height: 80vh;
+    overflow-y: scroll;
+    background-color: white;
+    padding: 4rem ;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.model-head{
+    margin-bottom: 1rem;
+}
+
+#close-btn{
+    
+    background: #093475;
+    margin-top: 1.5rem;
+    
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding: 6px 15px;
+    cursor: pointer;
+    color: white;
+
+
+}
+
+.show{
+    display: block;
+
+}
+
+#close-btn:hover{
+    background-color: #1a4c97;
+}
+
+
 
 @media screen and (max-width : 426px) {
     .fmain {
@@ -83,4 +150,24 @@
         font-size: .9rem;
 
     }
+    #Previews{
+        color: white;
+        font-size: .8rem;
+        padding-left: 2px;
+        
+    }
+    .model{
+
+        width: 88%;
+        max-height: 80vh;
+        overflow-y: scroll;
+        background-color: white;
+        padding: 2rem ;
+        border-radius: 8px;
+    }
+    .model-head{
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+    
 }

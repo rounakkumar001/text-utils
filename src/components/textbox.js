@@ -5,6 +5,8 @@ import UtL from "../img/UtL.png"
 import pvpng from "../img/previewicon.png"
 
 
+
+
 export default function Textbox() {
 
     const lowerToUpper = () => {
@@ -23,6 +25,12 @@ export default function Textbox() {
 
     const [text, setText] = useState("")
 
+
+
+
+
+
+
     return (
 
 
@@ -34,12 +42,68 @@ export default function Textbox() {
                 <p className='Info'>2. Numbers of Character &rarr; &#9889;<b>{text.length - (text.split(" ").length - 1)}</b> .</p>
                 <p className='Info'>3. Numbers of Word (Including Spaces ) &rarr; &#9889;<b>{text.split(" ").length - 1}</b> .</p>
                 <p className='Info Info-4'>4. Numbers of Sentences &rarr; &#9889;<b>{text.split(". ").length - 1}</b> .</p>
-                <p className='Info Info-4'>5. Avg Reading Speed &rarr; &#9889;<b> {(0.008 * text.split(" ").length).toFixed(2) } min</b>.</p>
+                <p className='Info Info-4'>5. Avg Reading Speed &rarr; &#9889;<b> {(0.008 * text.split(" ").length).toFixed(2)} min</b>.</p>
             </div>
-            <button onClick={lowerToUpper} className='Primary-btn btn-1'><img src={LtU} alt="" /></button>
-            <button onClick={upperToLower} className='Primary-btn'><img src={UtL} alt="" /></button>
-            <button  className='Primary-btn btn-spl'><img src={pvpng} alt="" /> <span id='Previews'>Preview</span></button>
 
+            <button onClick={lowerToUpper} className='Primary-btn btn-1'><img src={LtU} alt="" /></button>
+
+            <button onClick={upperToLower} className='Primary-btn'><img src={UtL} alt="" /></button>
+
+            <button className='Primary-btn btn-spl'><img src={pvpng} alt="" /> <span id='Previews'>Preview</span></button>
+
+           
+
+            
+
+
+        
+
+
+
+            <div className="model-container" id='modelBox'>
+                <div className="model">
+                    <h1 className="model-head" >Contant Preview </h1>
+                    <p id='print_contant' >{text}</p>
+                    <button id="close-btn">Close</button>
+                </div>
+            </div>
+
+
+
+
+
+            
         </>
     )
+
+    
 }
+
+
+
+    
+const Previewer = document.getElementsByClassName('Primary-btn')[2];
+const closeBtn = document.getElementById('close-btn');
+const ModelBox = document.getElementById('modelBox')
+const Print = document.getElementsByClassName('Primary-btn')[3];
+
+// console.log(Previewer);
+// console.log(closeBtn);
+// console.log(ModelBox);
+console.log(Print);
+
+Previewer.addEventListener('click', () => {
+    ModelBox.classList.add('show');
+})
+
+closeBtn.addEventListener('click', ()=>{
+    ModelBox.classList.remove('show');
+})
+
+// *********************
+
+
+
+
+
+
