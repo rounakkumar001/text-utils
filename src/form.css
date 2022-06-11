@@ -1,14 +1,39 @@
-.fmain{
+.fmain {
     display: flex;
     flex-direction: column;
     margin-top: 2rem;
     margin-left: 2rem;
     margin-right: 2rem;
 }
-.fmain textarea{
+
+.fmain textarea {
     padding: 1rem;
+    color: white;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     font-size: 1.1rem;
-    font-family:monospace
+    background-color: black;
+    font-family: monospace;
+    border : 2px solid rgb(49, 49, 137);
+}
+
+.fmain textarea:focus{
+    outline-color: rgb(55, 55, 201);
+    outline-width: 5px;
+    
+}
+
+@media screen and (max-width : 360px) {
+    .fmain {
+        margin-top: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .fmain textarea {
+        padding: .5rem;
+        padding-top: .5rem;
+        padding-bottom: 1rem;
+        font-size: 1rem;
+    }
 }

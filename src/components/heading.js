@@ -1,5 +1,6 @@
 import React from 'react'
-import logo from "../img/github-logo.png"
+// import logo from "../img/github-logo.png"
+import logo from "../img/bluegithub.png"
 import "../App.css"
 
 
