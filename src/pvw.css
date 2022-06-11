@@ -1,0 +1,26 @@
+.main{
+    margin-left: 2rem ;
+    margin-right: 2rem ;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container{
+    width: 60%;
+    
+    background-color:  rgb(24, 24, 105);
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 1.04rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+@media screen and (max-width : 426px ){
+    .main-container{
+        width: 98%;
+    }
+}

@@ -56,7 +56,18 @@
     font-family:Arial, Helvetica, sans-serif;
 }
 
+#Previews{
+    color: white;
+    font-size: 1rem;
+    padding-left: 2px;
+    
+}
 
+.btn-spl{
+    padding: 5px 10px;
+    font-family:Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+}
 
 @media screen and (max-width : 426px) {
     .fmain {

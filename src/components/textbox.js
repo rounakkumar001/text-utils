@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import '../form.css';
 import LtU from "../img/ltu.png"
 import UtL from "../img/UtL.png"
+import pvpng from "../img/previewicon.png"
 
 
 export default function Textbox() {
@@ -37,6 +38,7 @@ export default function Textbox() {
             </div>
             <button onClick={lowerToUpper} className='Primary-btn btn-1'><img src={LtU} alt="" /></button>
             <button onClick={upperToLower} className='Primary-btn'><img src={UtL} alt="" /></button>
+            <button  className='Primary-btn btn-spl'><img src={pvpng} alt="" /> <span id='Previews'>Preview</span></button>
 
         </>
     )
