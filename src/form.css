@@ -25,8 +25,6 @@
     outline-color: rgb(55, 55, 201);
     outline-width: 8px;
     background-color: rgb(50, 49, 49);
-    
-
 }
 
 .Info{
@@ -43,18 +41,17 @@
     border-top-left-radius: 5px  ;
     border-top-right-radius: 5px  ;
 }
+
 .Info-4{
-    
     border-bottom-left-radius: 5px  ;
     border-bottom-right-radius: 5px  ;
 }
+
 .heading{
     background: black;
     letter-spacing: 2px;
     padding: 10px 1rem;
     color: white;
-    /* border-top-left-radius: 5px;
-    border-top-right-radius: 5px; */
     border-radius: 5px;
     margin-bottom: .2rem;
     font-family:Arial, Helvetica, sans-serif;
@@ -64,20 +61,15 @@
     color: white;
     font-size: 1rem;
     padding-left: 2px;
-    
-    
 }
 
 .btn-spl{
     padding: 5px 10px;
     font-family:Arial, Helvetica, sans-serif;
-    letter-spacing: 1px;
-    
+    letter-spacing: 1px;  
 }
 
 /*-------------popUp Design------------------------*/
-
-
 .model-container{
     width: 100%;
     min-height: 100vh;
@@ -87,14 +79,10 @@
     top: 0px;
     left: 0px;
     padding-top: 5rem;
-    font-family: 'Open Sans', sans-serif;
-    
-    
+    font-family: 'Open Sans', sans-serif;   
 }
 
-
 .model{
-
     width: 60%;
     max-height: 80vh;
     overflow-y: scroll;
@@ -115,19 +103,19 @@
     
     background: #093475;
     margin-top: 1.5rem;
-    
     border: 1px solid gray;
     border-radius: 3px;
     padding: 6px 15px;
     cursor: pointer;
     color: white;
-
-
 }
 
 .show{
     display: block;
+}
 
+.show-2{
+    display: block;
 }
 
 #close-btn:hover{
@@ -142,22 +130,20 @@
         margin-left: 1rem;
         margin-right: 1rem;
     }
-
+    
     .fmain textarea {
         padding: .5rem;
         padding-top: .5rem;
         padding-bottom: 1rem;
         font-size: .9rem;
-
     }
     #Previews{
         color: white;
         font-size: .8rem;
         padding-left: 2px;
-        
     }
-    .model{
 
+    .model{
         width: 88%;
         max-height: 80vh;
         overflow-y: scroll;
@@ -165,9 +151,11 @@
         padding: 2rem ;
         border-radius: 8px;
     }
+
     .model-head{
         margin-bottom: 1rem;
         font-size: 1.5rem;
     }
     
 }
+

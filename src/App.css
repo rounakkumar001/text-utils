@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 body{
-    /* background-color: #d7d7e2; */
     background-color: azure;
 }
 
@@ -16,27 +15,21 @@ body{
     font-size: 1.5rem;
 }
 
-
-
 .t{
     font-weight: bold;
     padding: 3px;
-    /* color:  rgb(21, 21, 115); */
     color:  white;
-    /* border-radius: 10px; */
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
     margin-right: 3px;
-    /* border: 2px solid rgb(97, 95, 95); */
     border: 2px solid  rgb(21, 21, 115);
     box-shadow: 0px 0px 5px .2px  white;
-    
 }
+
+
 .rs{
     letter-spacing: 1px;   
-    /* color: rgb(21, 21, 115); */
-    color : white
-    
+    color : white    
 }
 
 .vLine{
@@ -55,7 +48,6 @@ body{
       100% {
         opacity: 1;
       }
-
 }
 
 #main{
@@ -68,15 +60,14 @@ body{
     background-color: #093475;
     z-index: 10;
 }
+
 #main img{
     height: 40px;
     margin: 10px;
     margin-right: 2rem;
-    
 }
 
 .Primary-btn{
-    /* background: rgb(29, 29, 165); */
     background: #093475;
     margin-left: .2rem;
     margin-top: 1rem;
@@ -84,8 +75,6 @@ body{
     border-radius: 3px;
     padding: 4px 15px;
     cursor: pointer;
-    margin-bottom: 2rem;
-
 }
 
 .btn-1{
@@ -93,16 +82,13 @@ body{
 }
 
 .Primary-btn:hover{
-    /* background: rgb(14, 14, 135); */
     background:#022a65;
     transition: .3s;
 }
 
 .Primary-btn img{
     height: 20px;
-    filter:  brightness(0) invert(1);
-    
-    
+    filter:  brightness(0) invert(1);  
 }
 
 

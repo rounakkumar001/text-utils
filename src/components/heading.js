@@ -1,8 +1,6 @@
 import React from 'react'
-// import logo from "../img/github-logo.png"
 import logo from "../img/whitegithub.png"
 import "../App.css"
-
 
 export default function Heading() {
     return (
@@ -11,9 +9,7 @@ export default function Heading() {
                 <div className="t">&#x0164;</div>
                 <div className="rs">ext&#x01B2;tils <span className="vLine">|</span></div>
             </div>
-
-           <a href="https://github.com/BhardwajRohan"> <img id="cat" src={logo} alt="" /> </a> 
-            
+           <a href="https://github.com/BhardwajRohan"> <img id="cat" src={logo} alt="" /> </a>  
         </div>
     )
 }
