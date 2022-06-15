@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@300&family=Spline+Sans+Mono:wght@300&display=swap');
 
+
+
 .fmain {
     display: flex;
     flex-direction: column;
@@ -72,7 +74,7 @@
 /*-------------popUp Design------------------------*/
 .model-container{
     width: 100%;
-    min-height: 100vh;
+    min-height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     display: none;
     position:absolute;
@@ -122,6 +124,16 @@
     background-color: #1a4c97;
 }
 
+.fa-solid{
+    font-size: 1.35rem;
+    color: white;
+    margin-right: 5px;
+}
+.btn-txt{
+    color : white;
+    font-size: 1rem;
+    
+}
 
 
 @media screen and (max-width : 426px) {
@@ -139,7 +151,7 @@
     }
     #Previews{
         color: white;
-        font-size: .8rem;
+        font-size: .6rem;
         padding-left: 2px;
     }
 
@@ -156,6 +168,31 @@
         margin-bottom: 1rem;
         font-size: 1.5rem;
     }
+
+    .btn-group{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 95%;
+
+    }
+    .btn-txt{
+        color : white;
+        font-size: .6rem;
+        
+    }
+    .fa-solid{
+        font-size: .8rem;
+        color: white;
+        margin-right: 5px;
+    }
+    .btn-spl{
+        padding: 1px 5px;
+        font-family:Arial, Helvetica, sans-serif;
+        letter-spacing: 1px;  
+    }
     
+   
 }
 
