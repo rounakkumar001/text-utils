@@ -70,16 +70,13 @@ body{
 .Primary-btn{
     background: #093475;
     margin-left: .2rem;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
     border: 1px solid gray;
     border-radius: 3px;
     padding: 4px 15px;
     cursor: pointer;
 }
 
-.btn-1{
-    margin-left: 2rem;
-}
 
 .Primary-btn:hover{
     background:#022a65;
@@ -91,6 +88,9 @@ body{
     filter:  brightness(0) invert(1);  
 }
 
+.btn-group{
+    margin: 1rem 2rem;
+}
 
 @media screen and (max-width : 426px){
     .logo{
@@ -109,20 +109,10 @@ body{
         height: 10px;
         
     }
-
-    .btn-1{
-        margin-left: 1rem;
+    .btn-group{
+        margin: 1rem 1rem;
     }
-}
-
-
-.toggler{
-    position: relative;
-    width: 40px;
-    height: 15px;
-    border-radius: 10px;
-    background-color: white;
-    cursor: pointer;
+    
     
 }
 
@@ -132,9 +122,5 @@ body{
 
 
 
+
 /* ..............................  */
-.right-head{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
