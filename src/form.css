@@ -10,6 +10,7 @@
     margin-right: 2rem;
 }
 
+
 .fmain textarea {
     padding: 1rem;
     color: white;
@@ -196,3 +197,58 @@
    
 }
 
+
+
+@media only screen and (min-width : 769px){
+    .fmain p{
+        width: 100%;
+        
+    }
+    .btn-group{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin : 4px;
+    }
+}
+
+@media screen and (max-width : 700px) {
+    .btn-group{
+        display: block;
+        
+    }
+    .btn-group button{
+        width: 136px;
+    }
+    
+}
+
+@media  screen and (min-width : 1920px) {
+    .fmain{
+        width : 50%;
+        margin: auto;
+        margin-top: 1rem;
+    }
+    .fmain p {
+        width : 100%;
+    }
+    .btn-group{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin : 4px;
+    }
+}
+
+@media screen and (max-width : 426px) {
+    .fmain{
+        overflow-x: hidden;
+    }   
+    .heading{
+        font-size: 1rem;
+    }
+    .fmain p {
+        width : 100%;
+        font-size: .6rem;
+    }
+}

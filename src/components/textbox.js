@@ -6,6 +6,9 @@ import pvpng from "../img/previewicon.png"
 import Print from "../img/print.png"
 import Copy from "../img/copy.png"
 import Remove from "../img/remove.png"
+import Speaker from "../img/speaker.png"
+// import say from 'say';
+import { useSpeechSynthesis } from 'react-speech-kit';
 
 
 
@@ -14,6 +17,11 @@ export default function Textbox() {
 
 
     const [text, setText] = useState("")
+    
+    const { speak } = useSpeechSynthesis();
+
+
+
 
     const lowerToUpper = () => {
         console.log("Lower to Upper Transform");
@@ -47,6 +55,9 @@ export default function Textbox() {
         setText(newText.join(" "))
     }
 
+
+   
+
     return (
 
         <>
@@ -57,9 +68,9 @@ export default function Textbox() {
                 <textarea value={text} onChange={checkOnChange} autoFocus name="" id="contantBox" cols="100" rows="12"></textarea>
                 <p className='Info Info-1'>1. Numbers of Character (Including Spaces ) &rarr; &#9889;<b>{text.length}</b> .</p>
                 <p className='Info'>2. Numbers of Character &rarr; &#9889;<b>{text.length - (text.split(" ").length - 1)}</b> .</p>
-                <p className='Info'>3. Numbers of Word (Including Spaces ) &rarr; &#9889;<b>{text.split(" ").length - 1}</b> .</p>
+                <p className='Info'>3. Numbers of Word &rarr; &#9889;<b>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length}</b> .</p>
                 <p className='Info Info-4'>4. Numbers of Sentences &rarr; &#9889;<b>{text.split(". ").length - 1}</b> .</p>
-                <p className='Info Info-4'>5. Avg Reading Speed &rarr; &#9889;<b> {(0.008 * text.split(" ").length).toFixed(2)} min</b>.</p>
+                <p className='Info Info-4'>5. Avg Reading Speed &rarr; &#9889;<b> {0.008 * text.split(" ").filter((element)=>{return element.length!==0}).length} min</b>.</p> 
             </div>
 
 
@@ -80,6 +91,29 @@ export default function Textbox() {
                 <button onClick={upperToLower} className='Primary-btn'><img src={UtL} alt="" /></button>
 
 
+
+                <button className='Primary-btn btn-spl' onClick={() => {
+                    if (text !== "") {
+                        const ModelBox = document.getElementById('modelBox')
+                        ModelBox.classList.add('show');
+                    }
+                    else {
+                        alert("Please Write some contant then contant Previwe will be displayed !")
+                    }
+                }}><img src={pvpng} alt="" /> <span id='Previews'>Preview</span></button>
+
+
+                <button onClick={RemoveExtraSpaces} className='Primary-btn btn-txt'> <img src={Remove} alt="" /> RemoveExtraSpaces</button>
+
+                <button onClick={copyText} className='Primary-btn btn-txt'> <img src={Copy} alt="" /> Copy</button>
+
+                <button onClick={() => speak({ text: text })} className='Primary-btn btn-txt'><img src={Speaker} alt="" /> Speak</button>
+
+                
+
+                <button onClick={clear} className='Primary-btn btn-txt'><i className="fa-solid fa-eraser"></i>Clear</button>
+
+
                 <button onClick={() => {
                     const prmptValue = window.confirm("Have you Finished The work ?")
 
@@ -95,26 +129,10 @@ export default function Textbox() {
 
                 }} className='Primary-btn'><img src={Print} alt="" /></button>
 
-
-
-
-                <button className='Primary-btn btn-spl' onClick={() => {
-                    if (text !== "") {
-                        const ModelBox = document.getElementById('modelBox')
-                        ModelBox.classList.add('show');
-                    }
-                    else {
-                        alert("Please Write some contant then contant Previwe will be displayed !")
-                    }
-                }}><img src={pvpng} alt="" /> <span id='Previews'>Preview</span></button>
-
-
-                <button onClick={RemoveExtraSpaces} className='Primary-btn btn-txt'> <img src={Remove} alt="" /> RemoveExtraSpaces</button>
                 
-                <button onClick={copyText} className='Primary-btn btn-txt'> <img src={Copy} alt="" /> Copy</button>
 
-                <button onClick={clear} className='Primary-btn btn-txt'><i className="fa-solid fa-eraser"></i>Clear</button>
-
+                
+            
             </div>
 
         </>
